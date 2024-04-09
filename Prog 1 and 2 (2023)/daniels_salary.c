@@ -2,23 +2,23 @@
 #include <stdlib.h>
 
 int main() {
-    int minutes, horas,val_hora;
+    int minutos, horas,x;
     float valor;
     printf("\nDigite as horas: ");
         scanf("%d", &horas);
 
     printf("Digite os minutos: ");
-        scanf("%d", &minutes);
+        scanf("%d", &minutos);
 
     printf("Digite o valor por hora: ");
-        scanf("%d", &val_hora);
+        scanf("%d", &x);
 
-    horas=horas+minutes/60;
-    minutes = minutes % 60;
+    horas=horas+minutos/60;
+    minutos = minutos % 60;
         printf("\nTotal em horas e minutos: %d:%d\n", horas, minutos);
 
-    valor=((float)(horas)+(float)(minutes)/60)*val_hora;
-        printf("\n O valor a ser pago: R$%.2f", valor);
+    valor=((float)(horas)+(float)(minutos)/60)*x;
+    printf("\nValor a ser pago: R$%.2f", valor);
 
     return 0;
 }
