@@ -2,7 +2,7 @@
 ;; Prof. Ausberto S. Castro Vera       (ascv@uenf.br)
 ;; UENF-CCT-LCMAT - Curso de Ciencia da Computacao
 ;; 2024
-;; Aluno: Fulano      <===========  escreva seu nome aqui
+;; Aluno: Mateus Magalhães Costa Ferreira     <===========  escreva seu nome aqui
 
 ;;;;;;;;;;;;;;;;   Escolha a linguagem R5RS
 ;;
@@ -24,9 +24,9 @@
 (define P 528)
 (display "P = ")
 P
-(if (> P 57) 
-    (display "P maior que 57")
-    (display "P menor que 57")
+(if (> P 200) 
+    (display "P maior que 200")
+    (display "P menor que 200")
     )
 ;;----------------------------
 

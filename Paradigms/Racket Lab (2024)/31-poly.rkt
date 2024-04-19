@@ -9,9 +9,6 @@
 ;;
 ;;  Aplicações:  raizes do polinomio Ax^2 + Bx + C = 0
 ;; ---------------------------------------------------
-
-
-
 (define poly2grau
   (lambda (a b c) 
   (cond 

@@ -2,7 +2,7 @@
 ;; Prof. Ausberto S. Castro Vera       (ascv@uenf.br)
 ;; UENF-CCT-LCMAT - Curso de Ciencia da Computacao
 ;; 2024 
-;; Aluno: Fulano      <===========  seu nome aqui e abaixo
+;; Aluno: Mateus Magalhães Costa Ferreira      <===========  seu nome aqui e abaixo
 ;;
 #lang racket      ;; define a linguagem default
 ; ------------------------------------------------
@@ -11,7 +11,7 @@
 (newline)
 (display "  Paradigmas de Linguagens de Programacao (Prof. Ausberto Castro)")
 (newline)
-(display "  Aluno(a):  Fulano ")
+(display "  Aluno(a): Mateus Magalhães Costa Ferreira ")
 (newline)
 ;;
 (newline)

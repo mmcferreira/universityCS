@@ -11,7 +11,7 @@
 (newline)
 (display "  Paradigmas de Linguagens de Programação (Prof. Ausberto Castro")
 (newline)
-(display "  Aluno:  Fulano ")
+(display "  Aluno:  Mateus Magalhães Costa Ferreira ")
 (newline)
 ;;
 ;;

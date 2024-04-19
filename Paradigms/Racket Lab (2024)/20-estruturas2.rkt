@@ -16,23 +16,26 @@
 (newline)
 (display "  Aluno(a):  Mateus Magalhães C. Ferreira ")
 (newline)
-;;;
-; Ir no Menu:  
-;   Language -> Choose Language -> How to Design Programs -> Advanced Student
+;;Definindo as Estruturas
 ;----------------------------------------------------------------------------
-
-;;
-(define-struct entrada (nome cep fone))
-
-(newline)  
-(make-entrada 'AntonioLopes '05890-001 '606-7771)
+(define-struct moto (modelo cor ano))
+(define-struct cidade (nome estado populacao))
+(define-struct carro (marca modelo ano))
+;----------------------------------------------------------------------------
+;;Definindo interior
+(define minha-moto (make-moto 'Honda 'Vermelho 2024))
+(define minha-cidade (make-cidade 'RioDeJaneiro 'RJ 6747815))
+(define meu-carro (make-carro 'Toyota 'Corolla 2024))
+;----------------------------------------------------------------------------
+;;Usando suas especificações
 (newline)
-(display "Nome = " )
-(entrada-nome (make-entrada 'AntonioLopes '05890-001 '606-7771))
-(display "CEP = " )
-(entrada-cep (make-entrada 'AntonioLopes '05890-001 '606-7771))
-;;
-;;
-(define abc (make-entrada 'AntonioLopes '05890-001 '606-7771))
-(display "Fone = " )
-(entrada-fone abc)
+(display "A marca do meu carro é: ")
+(carro-marca meu-carro)
+
+(newline)
+(display "O ano da minha moto é:")
+(moto-ano minha-moto)
+
+(newline)
+(display "O estado da minha cidade é:")
+(cidade-estado minha-cidade)

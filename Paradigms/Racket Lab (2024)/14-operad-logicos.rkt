@@ -6,7 +6,6 @@
 ;;
 #lang racket      ;; define a linguagem default
 ; ------------------------------------------------
-(newline)
 (display "  UENF-CCT-LCMAT-CC, 2024")
 (newline)
 (display "  Paradigmas de Linguagens de Programacao (Prof. Ausberto Castro)")

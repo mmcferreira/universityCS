@@ -2,7 +2,7 @@
 ;; Prof. Ausberto S. Castro Vera       (ascv@uenf.br)
 ;; UENF-CCT-LCMAT - Curso de Ciencia da Computacao
 ;; 2024
-;; Aluno: Fulano      <===========  escreva seu nome aqui 
+;; Aluno: Mateus Magalhães Costa Ferreira      <===========  escreva seu nome aqui 
 
 ;;;;;;;;;;;;;;;;   Escolha a linguagem "Determine language from source"
 ;;
@@ -12,7 +12,7 @@
 (newline)
 (display "  Paradigmas de Linguagens de Programacao (Prof. Ausberto Castro)")
 (newline)
-(display "  Aluno:  Fulano ")
+(display "  Aluno:  Mateus Magalhães C. Ferreira")
 (newline)
 ;;
 ;;
@@ -34,15 +34,25 @@
 ;; ---------------------------------------------------
 
 (newline)
-(display "O numero 8 esta' entre 7 e 18? ")
-(entre7e18? 8)
+  (display "O numero 8 esta' entre 7 e 18? ")
+  (entre7e18? 8)
 
 (newline)
-(display "O numero 37 esta' entre 7 e 18? ")
-(entre7e18? 37)
+  (display "O numero 37 esta' entre 7 e 18? ")
+  (entre7e18? 37)
 
 (newline)
-(display "Escreva qualquer variavel definida acima ... <var> <ENTER>   x m z Pi")
+(display "O valor de m é: ")
+  (display m)
+  (newline)
+
+(display "O valor de z é: ")
+  (display z)
+  (newline)
+
+(display "O valor de k é: ")
+(display k)
+(newline)
 
 ;; ---------------------------------------------------
 ; Expressao let:    (let ((var1 valor) ...) expr1  expr2 .....)
@@ -50,11 +60,11 @@
 (let ((x 24))
   (+ x 6))
 
-;;;
+
 (let ( (a 5) (b 8))
   (+ 3 (* a b)))
 
-;;;
+
 (let ( (op1 +) 
        (op2 *) 
        (x 5)
@@ -62,5 +72,14 @@
   (op1 3 (op2 4 x))
 )
 
+(let ((a 5))
+(* a a)
+)
+
+
+(let (( x 2) (y 10))
+(+ (/ y 5) (* 48 x) )
+)
+
 (display "O quadrado de 16 : ")(quadrado 16)
-  
+
