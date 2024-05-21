@@ -31,6 +31,9 @@ main:
         addi a1, t1, 0      #argumento para ecall, o valor a ser
         ecall               #imprime o ecall inteiro
 
+        li a0, 11 #11 quebra a linha
+        li a1, 13 #corresponde ao \n
+        ecall #imprime uma e quebra a linha para imprimir a próxima
     fim:
         li a0, 10
         ecall       #encerra o programa
