@@ -1,20 +1,26 @@
-typedef struct queueItems{
-    void *data;
-    struct queueItems *link;
-} QueueItems;
+// Estrutura de nó da fila
+typedef struct Node {
+  void *data;        // Ponteiro genérico para o dado
+  struct Node *next; // Ponteiro para o próximo nó
+} Node;
 
-typedef struct headQueue{
-    QueueItems *firstNode, *lastNode;
-    int size;
-} HeadQueue;
+// Estrutura da fila
+typedef struct {
+  Node *front; // Ponteiro para o primeiro nó (front)
+  Node *rear;  // Ponteiro para o último nó (rear)
+  int size;    // Tamanho atual da fila
+} Queue;
 
+Queue *createQueue();
 
-void init(HeadQueue *head);
-int empty(HeadQueue *head);
-void enqueue(HeadQueue *head, void *data);
-void *dequeue(HeadQueue *head);
+int isEmpty(Queue *queue);
 
-void *firstElement (HeadQueue *head);
-void *lastElement(HeadQueue *head);
-int size(HeadQueue *head);
-void freeEqueue(HeadQueue *head);
+void enqueue(Queue *queue, void *data);
+
+void *dequeue(Queue *queue);
+
+int size(Queue *queue);
+
+void printQueue(Queue *queue);
+
+void destroyQueue(Queue *queue);
