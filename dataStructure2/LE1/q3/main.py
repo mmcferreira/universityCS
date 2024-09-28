@@ -1,7 +1,6 @@
 import random
 import time
 
-# Função para Counting Sort
 def count_sort(input_array):
     M = max(input_array)
     count_array = [0] * (M + 1)
@@ -27,7 +26,6 @@ def count_sort(input_array):
 
     return output_array, comparisons, swaps
 
-# Função para Counting Sort usado no Radix Sort
 def counting_sort_for_radix(arr, exp1):
     n = len(arr)
     output = [0] * n
@@ -57,7 +55,6 @@ def counting_sort_for_radix(arr, exp1):
 
     return comparisons, swaps
 
-# Função para Radix Sort
 def radix_sort(arr):
     max1 = max(arr)
     exp = 1
@@ -70,7 +67,6 @@ def radix_sort(arr):
         exp *= 10
     return total_comparisons, total_swaps
 
-# Função para Insertion Sort usado no Bucket Sort
 def insertion_sort(bucket):
     comparisons = 0
     swaps = 0
@@ -86,7 +82,6 @@ def insertion_sort(bucket):
         swaps += 1
     return comparisons, swaps
 
-# Função para Bucket Sort
 def bucket_sort(arr):
     n = len(arr)
     buckets = [[] for _ in range(n)]
@@ -112,30 +107,27 @@ def bucket_sort(arr):
 
     return comparisons, swaps
 
-# Função principal
 if __name__ == "__main__":
-    # Gerar vetor de 100 mil unidades aleatórias
+    #gera vetor de 100 mil unidades aleatórias, usado para comparar
     size = 100000
     arr = [random.randint(0, 100000) for _ in range(size)]
 
-    # Medir tempo do Counting Sort
+    #medição de tempo
     start_time = time.time()
     sorted_count, count_comparisons, count_swaps = count_sort(arr.copy())
     count_time = time.time() - start_time
 
-    # Medir tempo do Radix Sort
     start_time = time.time()
     sorted_radix = arr.copy()
     radix_comparisons, radix_swaps = radix_sort(sorted_radix)
     radix_time = time.time() - start_time
 
-    # Medir tempo do Bucket Sort (apenas para valores em ponto flutuante)
     arr_float = [random.random() for _ in range(size)]  # Valores entre 0 e 1
     start_time = time.time()
     bucket_comparisons, bucket_swaps = bucket_sort(arr_float)
     bucket_time = time.time() - start_time
 
-    # Exibir resultados
+    #exibição de resultados
     print(f"Tamanho do vetor: {size} elementos\n")
     print(f"{'Algoritmo':<15} {'Tempo (s)':<15} {'Comparações':<15} {'Trocas':<15}")
     print("------------------------------------------------------------")
