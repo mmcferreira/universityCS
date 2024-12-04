@@ -59,14 +59,28 @@ class RedBlackTree:
 
     def add(self, key):
         self.root = self.insert(self.root, key)
-        self.root.color = False  # A raiz é sempre preta
+        if self.root is not None:
+            self.root.color = False  # A raiz é sempre preta
 
-    def height(self, node=None):
-        if node is None:
-            node = self.root
-        if node is None:
+    def height(self):
+        if self.root is None:
             return 0
-        return 1 + max(self.height(node.left), self.height(node.right))
+        
+        # Usando uma fila para realizar uma travessia por nível (BFS)
+        queue = [(self.root, 1)]  # Cada elemento da fila é uma tupla (nó, altura)
+        max_height = 0
+
+        while queue:
+            node, level = queue.pop(0)
+            max_height = max(max_height, level)
+            
+            # Adiciona os filhos à fila
+            if node.left:
+                queue.append((node.left, level + 1))
+            if node.right:
+                queue.append((node.right, level + 1))
+
+        return max_height
 
 # Testando a implementação
 if __name__ == "__main__":
